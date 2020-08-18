@@ -6,6 +6,7 @@ from .models import Ingredient
 from django.views.generic.detail import DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic.list import ListView
+from django.contrib import messages
 
 def main(request):
     template_name = 'gender.html'
@@ -21,16 +22,24 @@ def form1(request):
 
 def calculate_man(request):
     if request.method == "POST":
-        post = Ingredient.objects.get(barcode=request.POST['barcode_num'])
-        return render(request, 'main_man.html', {"post" : post})
+        try:
+            post = Ingredient.objects.get(barcode=request.POST['barcode_num'])
+            return render(request, 'main.html', {"post" : post})
+        except:
+            messages.info(request, "등록되지 않은 바코드입니다.")
     else:
         pass
     return render(request, 'form1.html')   
 
 def calculate(request):
+    
     if request.method == "POST":
-        post = Ingredient.objects.get(barcode=request.POST['barcode_num'])
-        return render(request, 'main.html', {"post" : post})
+        try:
+            post = Ingredient.objects.get(barcode=request.POST['barcode_num'])
+            return render(request, 'main.html', {"post" : post})
+        except:
+            messages.info(request, "등록되지 않은 바코드입니다.")
+            
     else:
         pass
     return render(request, 'form.html')

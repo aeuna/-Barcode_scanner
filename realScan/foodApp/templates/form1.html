@@ -100,5 +100,10 @@
     function btn() {
       alert('바코드 스캔은 준비중입니다...');
     }
+    {% if messages %}
+        {% for text in messages %}
+            alert("{{text.message}}");
+        {% endfor %}
+    {% endif %}
   </script>
 </html>
