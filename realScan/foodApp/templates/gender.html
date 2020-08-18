@@ -1,75 +1,93 @@
-{% load sass_tags %}
-{% load static %}
+{% load sass_tags %} {% load static %}
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href ="{% static 'style.css' %}?after">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{% static 'style.css' %}?after" />
     <title>Document</title>
-    <link href="{% sass_src 'css/PC.scss' %}" rel="stylesheet">
-</head>
-<style>
-    body{
+    <link href="{% sass_src 'css/PC.scss' %}" rel="stylesheet" />
+  </head>
+  <style>
+    body {
       margin: 0px;
       text-align: center;
       align-items: center;
       background-color: white;
     }
-    .top{
+    .top {
       height: 130px;
       width: 100%;
       padding-top: 40px;
       text-align: center;
-      background-color: #295C71;
+      background-color: #295c71;
     }
-    .name{
-      color : white;
+    .name {
+      color: white;
       font-size: 30px;
       font-weight: 600;
     }
-    .name2{
-        color : white;
+    .name2 {
+      color: white;
       font-size: 15px;
       font-weight: 500;
     }
-    .btn_1{
-      background-color: #92C1D4;
+    .btn_1 {
+      background-color: #92c1d4;
       color: white;
       border: 0px solid white;
       font-size: 15px;
-      
+
       border-radius: 50px;
       margin: 10px;
       padding-left: 50px;
       padding-right: 50px;
       padding-bottom: 20px;
       padding-top: 20px;
-      }
-    .btn_1:hover{
-      background-color:#b6c4c9;
-      color: white;
-    
     }
-  
+    .btn_1:hover {
+      background-color: #b6c4c9;
+      color: white;
+    }
+    a {
+      text-decoration: none;
+      color: white;
+    }
+    .aboutus {
+      float: right;
+      margin-right: 2vw;
+    }
   </style>
-<body>
-    <div class="top"><h2 class="name">내코드</h2></div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <div class = "noPC">'내코드'는 모바일 버전 서비스만 지원하고 있습니다.<br>모바일에서 만나요🙋‍♀️</div>
-    <br>
-    <br>
-    <div class="select">
-        <h1>성별을 선택해주세요!</h1>
-        <div class="gender">
-            <a href="main.html"><img src = "static/여자.png" style="width: 120px;"></a>
-            <a href="main_man.html"><img src = "static/남자.png" style="width: 120px;"></a>
-        </div>
-        
+  <body>
+    <div class="top">
+      <h2 class="name">내코드</h2>
+      <div class="aboutus">
+        <a
+          href="https://www.notion.so/ALL-ABOUT-22ab5d9390ba4b18a84c35db5caed157"
+          >ABOUT US</a
+        >
+      </div>
     </div>
-    
-</body>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div class="noPC">
+      '내코드'는 모바일 버전 서비스만 지원하고 있습니다.<br />모바일에서
+      만나요🙋‍♀️
+    </div>
+    <br />
+    <br />
+    <div class="select">
+      <h1>성별을 선택해주세요!</h1>
+      <div class="gender">
+        <a href="main.html"
+          ><img src="static/여자.png" style="width: 120px;"
+        /></a>
+        <a href="main_man.html"
+          ><img src="static/남자.png" style="width: 120px;"
+        /></a>
+      </div>
+    </div>
+  </body>
 </html>
