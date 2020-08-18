@@ -1,3 +1,4 @@
+{% load sass_tags %}
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -6,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href ="{% static 'style.css' %}?after">
     <title>Document</title>
+    <link href="{% sass_src 'css/PC.scss' %}" rel="stylesheet">
 </head>
 <style>
     body{
@@ -47,12 +49,17 @@
     .btn_1:hover{
       background-color:#b6c4c9;
       color: white;
+    
     }
+  
   </style>
 <body>
     <div class="top"><h2 class="name">내코드</h2></div>
     <br>
-    <div></div>
+    <br>
+    <br>
+    <br>
+    <div class = "noPC">'내코드'는 모바일 버전 서비스만 지원하고 있습니다.<br>모바일에서 만나요🙋‍♀️</div>
     <br>
     <br>
     <div class="select">
